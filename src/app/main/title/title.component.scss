@@ -1,0 +1,231 @@
+@import "~src/assets/scss/theme-config";
+@import "~src/assets/scss/config";
+
+.#{$style-prefix}-title {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(/assets/images/bg.png);
+  background-size: cover;
+  background-position: center;
+
+  &__logo {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 6vh;
+    margin-left: 14vh;
+
+    img {
+      @include for-phone {
+        height: 120px;
+      }
+
+      @include for-tablet {
+        height: 140px;
+      }
+
+      @include for-small-desktop {
+        height: 160px;
+      }
+
+      @include for-desktop {
+        height: 180px;
+      }
+
+      @include for-big-desktop {
+        height: 200px;
+      }
+    }
+  }
+
+  &__instruction {
+    height: fit-content;
+    width: fit-content;
+
+    img {
+      height: 60vh;
+    }
+  }
+
+  &__instruction-content {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $light;
+    margin-top: 30px;
+    text-align: center;
+    padding-left: 9%;
+
+    @include for-phone {
+      margin-top: 12px;
+    }
+
+    @include for-tablet {
+      margin-top: 16px;
+    }
+
+    @include for-small-desktop {
+      margin-top: 20px;
+    }
+
+    @include for-desktop {
+      margin-top: 24px;
+    }
+
+    @include for-big-desktop {
+      margin-top: 30px;
+    }
+  }
+
+  &__instruction-title,
+  &__instruction-try-it {
+    font-weight: bold;
+    @include for-phone {
+      font-size: 12px;
+    }
+
+    @include for-tablet {
+      font-size: 14px;
+    }
+
+    @include for-small-desktop {
+      font-size: 20px;
+    }
+
+    @include for-desktop {
+      font-size: 24px;
+    }
+
+    @include for-big-desktop {
+      font-size: 34px;
+    }
+  }
+
+  &__instruction-try-it {
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s linear;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__instruction-description {
+    font-weight: bold;
+    margin-top: 6px;
+    @include for-phone {
+      font-size: 10px;
+      font-weight: normal;
+      margin-top: 1px;
+    }
+
+    @include for-tablet {
+      font-size: 11px;
+      font-weight: normal;
+      margin-top: 2px;
+    }
+
+    @include for-small-desktop {
+      font-size: 13px;
+      font-weight: normal;
+      margin-top: 6px;
+    }
+
+    @include for-desktop {
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+
+    @include for-big-desktop {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+  }
+
+  &__instruction-sub-title {
+    font-weight: bolder;
+
+    @include for-phone {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    @include for-tablet {
+      font-size: 18px;
+      margin-top: 7px;
+    }
+
+    @include for-small-desktop {
+      font-size: 24px;
+      margin-top: 15px;
+    }
+
+    @include for-desktop {
+      margin-top: 15px;
+      font-size: 28px;
+    }
+
+    @include for-big-desktop {
+      font-size: 36px;
+      margin-top: 15px;
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    border-bottom: 1px solid $light;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @include for-phone {
+      width: 80%;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    @include for-tablet {
+      width: 90%;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    @include for-small-desktop {
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: $primary;
+    text-align: center;
+    letter-spacing: 4px;
+    margin: 0;
+
+    @include for-phone {
+      font-size: 48px;
+    }
+
+    @include for-tablet {
+      font-size: 52px;
+    }
+
+    @include for-small-desktop {
+      font-size: 84px;
+    }
+
+    @include for-desktop {
+      font-size: 100px;
+    }
+
+    @include for-big-desktop {
+      font-size: 120px;
+    }
+  }
+}
