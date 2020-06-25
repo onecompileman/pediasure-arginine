@@ -1,17 +1,40 @@
 <div class="pa-title" fxLayoutAlign="space-between">
   <div
-    fxFlex="40"
+    fxFlex="70"
     class="pa-title__logo"
     fxLayout="column"
     fxLayoutAlign="center center"
   >
-    <img src="assets/images/molecule.png" alt="Logo" />
-    <p class="pa-title__title">
-      ARGININE <br />
+    <img
+      class="animate__bounceInUp animate__animated"
+      [class.animate__bounceOutUp]="animationFoodExited"
+      [class.animate__delay-2s]="!animationFoodExited"
+      src="assets/images/molecule.png"
+      alt="Logo"
+    />
+    <p
+      class="pa-title__title animate__bounceInLeft animate__animated"
+      [class.animate__bounceOutLeft]="animationFoodExited"
+      [class.animate__delay-2s]="!animationFoodExited"
+    >
+      FASTER GROWTH <sup>1</sup> <br />
       GAME
     </p>
+
+    <div
+      class="pa-title__start animate__bounceInUp animate__animated"
+      (click)="startGame()"
+      [class.animate__bounceOutUp]="animationFoodExited"
+      [class.animate__delay-3s]="!animationFoodExited"
+    >
+      START
+    </div>
   </div>
-  <div class="pa-title__instruction" fxLayoutAlign="center">
+  <div
+    *ngIf="false"
+    class="pa-title__instruction animate__slideInDown animate__animated animate__delay-2s"
+    fxLayoutAlign="center"
+  >
     <img src="assets/images/emphasis.png" alt="Emphasis" />
 
     <div
@@ -37,9 +60,80 @@
         <br />
         And then we'll show you if you are right!
       </span>
-      <span class="pa-title__instruction-try-it">
+      <span
+        class="pa-title__instruction-try-it animate__headShake animate__animated animate__delay-3s animate__slow"
+      >
         Try it now!
       </span>
     </div>
   </div>
+
+  <!-- <div class="pa-title__food-container"> -->
+  <img
+    src="assets/images/apple.png"
+    alt="Apple"
+    class="pa-title__origin-3"
+    [class.pa-title__apple]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/bacon.png"
+    alt="Bacon"
+    class="pa-title__origin-4"
+    [class.pa-title__bacon]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/beans.png"
+    alt="Beans"
+    class="pa-title__origin-1"
+    [class.pa-title__beans]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/cheese.png"
+    alt="Cheese"
+    class="pa-title__origin-5"
+    [class.pa-title__cheese]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/chicken.png"
+    alt="Chicken"
+    class="pa-title__origin-2"
+    [class.pa-title__chicken]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/durian.png"
+    alt="Durian"
+    class="pa-title__origin-3"
+    [class.pa-title__durian]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/lettuce.png"
+    alt="Lettuce"
+    class="pa-title__origin-6"
+    [class.pa-title__lettuce]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/milk.png"
+    alt="Milk"
+    class="pa-title__origin-4"
+    [class.pa-title__milk]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/potato.png"
+    alt="Potato"
+    class="pa-title__origin-5"
+    [class.pa-title__potato]="animationFoodStarted"
+  />
+  <img
+    src="assets/images/meat.png"
+    alt="Meat"
+    class="pa-title__origin-4 pa-title__meat"
+    [class.pa-title__meat]="animationFoodStarted"
+  />
+
+  <img
+    src="assets/images/nuts.png"
+    alt="Nuts"
+    class="pa-title__origin-6 pa-title__nuts"
+    [class.pa-title__nuts]="animationFoodStarted"
+  />
 </div>
