@@ -1,3 +1,18 @@
-<p>
-  gameover works!
-</p>
+<div class="pa-gameover">
+
+  <span>
+    OOOPS! You only got
+  </span>
+  <p>
+    {{ score }}/5
+  </p>
+  <span>
+    YOU CAN TRY AGAIN TO WIN A GIFT!
+  </span>
+  <div
+    (click)="tryItNow()"
+    class="pa-gameover__try-it-again animate__bounceInUp animate__animated animate__delay-1s"
+  >
+    TRY IT NOW!
+  </div>
+</div>

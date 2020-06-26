@@ -92,6 +92,15 @@ export class GameComponent implements OnInit {
     this.gameTimerInterval = setInterval(() => {
       if (this.gameTimer === 0) {
         clearInterval(this.gameTimerInterval);
+
+        const score = this.foods.filter(food => food.correct && food.selected).length;
+
+        if (score === 5) {
+          this.router.navigate(['/congrats']);
+        } else {
+          localStorage.setItem('score', score.toString());
+          this.router.navigate(['/game-over']);
+        }
       }
       this.gameTimer--;
       this.time = this.gameTimer.toString();

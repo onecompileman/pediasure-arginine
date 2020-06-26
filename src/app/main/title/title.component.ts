@@ -23,6 +23,6 @@ export class TitleComponent implements OnInit, AfterViewInit {
     this.animationFoodExited = true;
     setTimeout(() => {
       this.router.navigate(["/how-to-play"]);
-    }, 800);
+    }, 1000);
   }
 }

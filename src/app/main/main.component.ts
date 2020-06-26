@@ -1,6 +1,8 @@
 import { Component, OnInit, HostListener } from "@angular/core";
 import { mainRoutingAnimation } from "./main-routing.animation";
 import { RouterOutlet } from "@angular/router";
+import { SoundManagerService } from '../core/services/sound-manager.service';
+
 
 @Component({
   selector: "pa-main",
@@ -14,12 +16,17 @@ export class MainComponent implements OnInit {
   height: number;
   width: number;
 
-  constructor() {}
+
+  constructor(
+    private soundManager: SoundManagerService
+  ) {}
 
   ngOnInit() {
     this.isPortrait = innerHeight > innerWidth;
     this.height = innerHeight;
     this.width = innerWidth;
+
+    this.soundManager.playBackgroundMusic();
   }
 
   @HostListener("window:resize", ["$event"])
@@ -36,4 +43,5 @@ export class MainComponent implements OnInit {
       outlet.activatedRouteData["animation"]
     );
   }
+
 }
