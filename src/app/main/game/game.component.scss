@@ -12,7 +12,7 @@
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
 
-  &__timer-container {
+  &__timer-container-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,8 +103,14 @@
 
   &__food-container {
     img {
+      cursor: pointer;
       height: 34vh;
       position: absolute;
+      transition: 0.2s linear;
+
+      &:hover {
+        height: 35vh;
+      }
     }
   }
 
@@ -112,68 +118,231 @@
     position: absolute;
     top: 15vh;
     left: 17vh;
+
+    &-overlay {
+      position: absolute;
+      top: 15vh;
+      left: 17vh;
+      opacity: 0.5;
+
+      &:hover {
+      height: 34vh;
+      }
+    }
   }
 
   &__food-2 {
+    animation-delay: 0.1s;
     position: absolute;
     top: 15vh;
     left: 85vh;
+
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      top: 15vh;
+      left: 85vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
 
   &__food-3 {
+    animation-delay: 0.15s;    
     position: absolute;
     top: 32vh;
     left: 0;
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      top: 32vh;
+      left: 0;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
 
   &__food-4 {
+    animation-delay: 0.2s;    
     position: absolute;
     top: 32vh;
     left: 34vh;
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      top: 32vh;
+      left: 34vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
 
   &__food-5 {
+    animation-delay: 0.25s;        
     position: absolute;
     top: 32vh;
     left: 68vh;
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      top: 32vh;
+      left: 68vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
 
   &__food-6 {
     position: absolute;
     top: 32vh;
     left: 102vh;
+    
+    &-overlay {
+      animation-duration: 0.2s;
+      
+      position: absolute;
+    top: 32vh;
+    left: 102vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
 
   &__food-7 {
+    animation-delay: 0.1s;     
     position: absolute;
     top: 49vh;
     left: 17vh;
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      top: 49vh;
+      left: 17vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
   &__food-8 {
+    animation-delay: 0.15s;    
     position: absolute;
     top: 49vh;
     left: 51vh;
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      top: 49vh;
+      left: 51vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
   &__food-9 {
+    animation-delay: 0.2s;    
     position: absolute;
     top: 49vh;
     left: 85vh;
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      top: 49vh;
+      left: 85vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
   &__food-10 {
+    animation-delay: 0.25s;    
     position: absolute;
     top: 49vh;
     left: 119vh;
+    
+    &-overlay {
+      animation-duration: 0.2s;
+      
+      position: absolute;
+      top: 49vh;
+      left: 119vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
 
   &__food-11 {
     position: absolute;
     top: 66vh;
     left: 34vh;
+    
+    &-overlay {
+      position: absolute;
+      animation-duration: 0.2s;
+      
+      
+    top: 66vh;
+    left: 34vh;
+      opacity: 0.5;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
   &__food-12 {
     position: absolute;
     top: 66vh;
     left: 102vh;
+    
+    &-overlay {
+      position: absolute;
+      top: 66vh;
+      left: 102vh;
+      opacity: 0.5;
+      animation-duration: 0.2s;
+
+      &:hover {
+        height: 34vh;
+        }
+    }
   }
 
   &__timer {

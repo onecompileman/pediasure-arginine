@@ -1,34 +1,26 @@
 <div class="pa-game">
-  <!-- <div class="pa-game__timer-container">
+  <div *ngIf="startTimer > 0" class="pa-game__timer-container-2">
     <span class="pa-game__are-you-ready">
       ARE YOU READY?
     </span>
     <span class="pa-game__timer">
       {{ startTimer }}
     </span>
-  </div> -->
+  </div>
 
-  <div class="pa-game__container">
-    <div class="pa-game__timer-container">
+  <div *ngIf="startTimer <= 0" class="pa-game__container ">
+    <div class="pa-game__timer-container animate__bounceInDown animate__animated">
       <img src="assets/images/emphasis.png" alt="Timer" />
       <div>
-        <span>00:15</span>
+        <span>00:{{ time }}</span>
       </div>
     </div>
 
     <div class="pa-game__food-container">
-      <img class="pa-game__food-1" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-2" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-3" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-4" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-5" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-6" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-7" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-8" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-9" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-10" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-11" src="assets/images/turkey.png" alt="Food" />
-      <img class="pa-game__food-12" src="assets/images/turkey.png" alt="Food" />
+      <ng-container *ngFor="let food of foods; let i = index" > 
+        <img (click)="selectFood(food)" class="pa-game__food-{{ i + 1 }} animate__bounceInLeft animate__animated" [src]="food.path" alt="Food" />
+        <img (click)="selectFood(food)" *ngIf="food.selected" class="pa-game__food-{{ i + 1 }}-overlay animate__zoomIn animate__animated" src="assets/images/overlay.png" alt="Food" />
+      </ng-container>
     </div>
   </div>
 </div>
